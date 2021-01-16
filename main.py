@@ -7,7 +7,7 @@ from datetime import datetime
 import time
 import math
 
-
+#This is a wallpaper ad. Here you can change the default wallpaper to your own
 bliss_day = 'C:\\Users\\danv4\\OneDrive\\Документы\\DДемки\\Сменна обоев\\Bliss Day.png'
 bliss_night = 'C:\\Users\\danv4\\OneDrive\\Документы\\DДемки\\Сменна обоев\\Bliss Night.png'
 bliss_dusk = 'C:\\Users\\danv4\\OneDrive\\Документы\\DДемки\\Сменна обоев\\Bliss Dusk.png'
@@ -23,10 +23,10 @@ def changeBG(path):
 
 hour = int(datetime.now().hour)
 
-BG = input("Введи B(bliss) или F(fluent) : ")
+BG = input("Input B(bliss) or F(fluent) : ")
 
 def restartab():
-	'''Это функция которая высывает другую функцию которая вызывает эту для BLISS'''
+	'''This is a function that sends another function that calls this for BLISS'''
 	if hour>= 6 and hour<12:
 		now = datetime.now().hour
 		mnow = datetime.now().minute
