@@ -23,7 +23,7 @@ def changeBG(path):
 
 hour = int(datetime.now().hour)
 
-BG = input("Input B(bliss) or F(fluent) : ")
+BG = input("Input B(bliss) or F(fluent) and you can select your files just input SF(select files) : ")
 
 def restartab():
 	'''This is a function that sends another function that calls this for BLISS'''
@@ -284,3 +284,139 @@ def restartbf():
 if BG == 'F':
 
 	restartaf()
+
+def restartsfa():
+	if hour>= 6 and hour<12:
+		now = datetime.now().hour
+		mnow = datetime.now().minute
+		
+		nowm = now * 60
+		
+		nows = nowm * 60
+		mnows = mnow * 60
+		
+		summ = nows + mnows
+
+		timesleep = 21600
+
+		sleeptime = abs(summ - timesleep)
+		changeBG(sf_day)
+		time.sleep(sleeptime)
+		changeBG(sf_dusk)
+		tims = 21600
+		time.sleep(tims)
+		changeBG(sf_night)
+		tims = 46800
+		time.sleep(tims)
+		restartsfb()
+	elif hour>= 12 and hour<18:
+		now = datetime.now().hour
+		mnow = datetime.now().minute
+		
+		nowm = now * 60
+		
+		nows = nowm * 60
+		mnows = mnow * 60
+		
+		summ = nows + mnows
+
+		timesleep2 = 21600
+
+		sleeptime = abs(summ - timesleep2)
+		changeBG(sf_dusk)
+		time.sleep(sleeptime)
+		changeBG(sf_night)
+		tims = 46800
+		time.sleep(tims)
+		restartsfb()
+
+	else:
+		now = datetime.now().hour
+		mnow = datetime.now().minute
+		
+		nowm = now * 60
+		
+		nows = nowm * 60
+		mnows = mnow * 60
+		
+		summ = nows + mnows
+
+		timesleep3 = 46800
+
+		sleeptime = abs(summ - timesleep3)
+		changeBG(sf_night)
+		time.sleep(sleeptime)
+		restartsfb()
+
+def restartsfb():
+	if hour>= 6 and hour<12:
+		now = datetime.now().hour
+		mnow = datetime.now().minute
+		
+		nowm = now * 60
+		
+		nows = nowm * 60
+		mnows = mnow * 60
+		
+		summ = nows + mnows
+
+		timesleep = 21600
+
+		sleeptime = abs(summ - timesleep)
+		changeBG(sf_day)
+		time.sleep(sleeptime)
+		changeBG(sf_dusk)
+		tims = 21600
+		time.sleep(tims)
+		changeBG(sf_night)
+		tims = 46800
+		time.sleep(tims)
+		restartsfa()
+	elif hour>= 12 and hour<18:
+		now = datetime.now().hour
+		mnow = datetime.now().minute
+		
+		nowm = now * 60
+		
+		nows = nowm * 60
+		mnows = mnow * 60
+		
+		summ = nows + mnows
+
+		timesleep2 = 21600
+
+		sleeptime = abs(summ - timesleep2)
+		changeBG(sf_dusk)
+		time.sleep(sleeptime)
+		changeBG(sf_night)
+		tims = 46800
+		time.sleep(tims)
+		restartsfa()
+
+	else:
+		now = datetime.now().hour
+		mnow = datetime.now().minute
+		
+		nowm = now * 60
+		
+		nows = nowm * 60
+		mnows = mnow * 60
+		
+		summ = nows + mnows
+
+		timesleep3 = 46800
+
+		sleeptime = abs(summ - timesleep3)
+		changeBG(sf_night)
+		time.sleep(sleeptime)
+		restartsfa()
+
+
+
+if BG == 'SF':
+
+	sf_day = input('Input day wallpaper')
+	sf_dusk = input('Input dusk wallpaper')
+	sf_night = input('Input night wallpaper')
+
+	restartsfa()
